@@ -1,0 +1,9 @@
+{
+  "firebase": "gfilms",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
