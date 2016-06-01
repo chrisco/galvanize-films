@@ -10,7 +10,7 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="../styles.css">
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,12 +30,12 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Galvanize Films</a>
+				<a class="navbar-brand" href="../">Galvanize Films</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse pull-right">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="./create">Add Film</a></li>
+					<li><a href="../">Home</a></li>
+					<li class="active"><a href="#">Add Film</a></li>
 					<li><a href="#sign-in-sign-up">Sign-in / Sign-up</a></li>
 				</ul>
 			</div>
@@ -45,25 +45,44 @@
 
 	<main class="container">
 		<div class="jumbotron">
-			<h1>Galvanize Films</h1>
-			<p class="lead">Search for films and save them to your lists... bitchez</p>
+			<h1>Add Film</h1>
+			<p class="lead">Enter details below</p>
 		</div>
-		<form class="" action="index.html" method="post">
+		<form class="add-film-form" action="index.html" method="post">
 			<div class="form-group">
-				<input type="text" class="form-control" id="filmSearch" placeholder="Search for a film...">
+				<label for="title">Title:</label>
+				<input class="form-control" type="text" name="title" value="">
+				<label for="genre">Genre:</label>
+				<input class="form-control" type="text" name="genre" value="">
+				<label for="description">Description:</label>
+				<textarea class="form-control" name="description" rows="3" cols="40"></textarea>
+				<label for="coverPicture">Film Image:</label>
+				<input class="form-control" type="url" name="coverPicture" value="">
+				<label for="rating">Rating:</label>
+				<select class="form-control" name="rating">
+					<option value="G">G</option>
+					<option value="PG">PG</option>
+					<option value="PG-13">PG-13</option>
+					<option value="R">R</option>
+					<option value="NR">NR</option>
+				</select>
 			</div>
-      <button class="btn btn-default center-block search-button" type="button" name="movie-search">Search</button>
+			<button class="btn btn-default center-block" type="submit" name="add-film">Add Film</button>
 		</form>
-    <footer class="small">
-      © 2016 Galvanize Films
-    </footer>
+		<div class="row">
+			<div id="results" class="col-md-12">
+			</div>
+		</div>
+		<footer class="small">
+			© 2016 Galvanize Films
+		</footer>
 	</main>
 	<!-- /.container -->
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="app.js">
+	<script type="text/javascript" src="../app.js">
 	</script>
 </body>
 
